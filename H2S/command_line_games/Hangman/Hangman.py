@@ -19,7 +19,12 @@ if selection == "easy":
 	while 0 < lives:
 		print easy
 		guess = raw_input("LETTER: ")
-		if guess in easy:
+		if len(guess) > 1:
+			print("1 letter only.")
+			for x in underscore:
+				print x,
+			lives = lives - 1
+		elif guess in easy:
 			pos = easy.index(guess)
 			underscore[pos] = guess
 			for x in underscore:
@@ -53,7 +58,6 @@ elif selection == "hard":
 	for x in underscore:
 		print x,
 	while 0 < lives:
-	30614
 		print hard
 		guess = raw_input("LETTER: ")
 		if guess in hard:
