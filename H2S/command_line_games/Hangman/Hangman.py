@@ -29,6 +29,8 @@ if selection == "easy":
 			underscore[pos] = guess
 			for x in underscore:
 				print x,
+		elif lives = 0:
+			print(" You ran out of lives ")
 		else:
 			print("That is not the correct letter.")
 			print underscore
